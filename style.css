@@ -1,13 +1,309 @@
+/* ===========================
+   Student Residences Budapest
+   style.css
+=========================== */
 
-body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#222}
-header{background:#fff;padding:15px;text-align:center;position:sticky;top:0;box-shadow:0 2px 10px rgba(0,0,0,.08)}
-.logo{max-width:420px;width:90%}
-nav{background:#0D4D9E;padding:12px;text-align:center}
-nav a{color:#fff;text-decoration:none;margin:0 10px}
-.hero{background:linear-gradient(135deg,#0D4D9E,#3B82F6);color:#fff;padding:80px 20px;text-align:center}
-.container{max-width:1200px;margin:auto;padding:30px 20px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{background:#fff;padding:20px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.08)}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px}
-.gallery img{width:100%;border-radius:10px}
-.btn{background:#fff;color:#0D4D9E;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:bold}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f6f8fb;
+    color:#333;
+    line-height:1.6;
+}
+
+/* ---------- HEADER ---------- */
+
+header{
+    background:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo img{
+    height:70px;
+}
+
+nav{
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#0D4D9E;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#2c7be5;
+}
+
+/* ---------- HERO ---------- */
+
+.hero{
+
+    height:100vh;
+
+    background-image:
+    linear-gradient(rgba(0,0,0,.45),
+    rgba(0,0,0,.45)),
+    url("hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+     
+}
+
+.hero h1{
+    font-size:58px;
+    margin-bottom:20px;
+}
+
+.hero h2{
+    font-size:28px;
+    font-weight:400;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:35px;
+}
+
+/* ---------- BUTTONS ---------- */
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn,
+.btn2{
+    padding:15px 35px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn{
+    background:#fff;
+    color:#0D4D9E;
+}
+
+.btn:hover{
+    background:#e9ecef;
+}
+
+.btn2{
+    border:2px solid white;
+    color:white;
+}
+
+.btn2:hover{
+    background:white;
+    color:#0D4D9E;
+}
+
+/* ---------- TITLES ---------- */
+
+.title{
+    text-align:center;
+    font-size:36px;
+    margin-bottom:40px;
+    color:#0D4D9E;
+}
+
+/* ---------- CARDS ---------- */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+    margin-bottom:70px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#0D4D9E;
+    margin-bottom:15px;
+}
+
+.card a{
+    display:inline-block;
+    margin-top:20px;
+    color:white;
+    background:#0D4D9E;
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:6px;
+}
+
+/* ---------- TABLE ---------- */
+
+.price-table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    margin-bottom:70px;
+}
+
+.price-table th{
+    background:#0D4D9E;
+    color:white;
+    padding:18px;
+}
+
+.price-table td{
+    padding:18px;
+    border-bottom:1px solid #eee;
+}
+
+.price-table tr:hover{
+    background:#f5f8ff;
+}
+
+/* ---------- CONTACT ---------- */
+
+.contact-box{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    margin-bottom:70px;
+}
+
+.contact-box h3{
+    color:#0D4D9E;
+    margin-bottom:20px;
+}
+
+.contact-box p{
+    margin-bottom:15px;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+    background:#0D4D9E;
+    color:white;
+    text-align:center;
+    padding:35px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media(max-width:900px){
+
+header .container{
+    flex-direction:column;
+}
+
+nav{
+    margin-top:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.hero h1{
+    font-size:40px;
+}
+
+.hero h2{
+    font-size:22px;
+}
+
+.title{
+    font-size:28px;
+}
+
+}
+
+@media(max-width:600px){
+
+.hero{
+    height:auto;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:32px;
+}
+
+.hero h2{
+    font-size:20px;
+}
+
+.logo img{
+    height:55px;
+}
+
+.buttons{
+    flex-direction:column;
+}
+
+.btn,
+.btn2{
+    width:100%;
+}
+
+.price-table{
+    display:block;
+    overflow-x:auto;
+}
+
+}
